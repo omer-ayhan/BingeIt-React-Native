@@ -1,15 +1,25 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableWithoutFeedback } from "react-native";
 import styles from "./MovieCardStyle"
 
 
-const MovieCard = () => {
+const MovieCard = ({ data, onSelect }) => {
 
 
     return (
-        <View>
-            <Text>MovieCard</Text>
-        </View>
+        <TouchableWithoutFeedback onPress={onSelect}>
+            <View style={styles.container} >
+
+                <View style={styles.nameContainer}>
+                    <Text style={styles.name}>{data.name}</Text>
+                </View>
+
+                <View style={styles.directorContainer}>
+                    <Text style={styles.director}>{data.director}</Text>
+                </View>
+
+            </View>
+        </TouchableWithoutFeedback>
     )
 };
 
