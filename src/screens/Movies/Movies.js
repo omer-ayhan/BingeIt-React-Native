@@ -4,7 +4,7 @@ import styles from "./MoviesStyle"
 import axios from "axios";
 import MovieCard from "../../components/MovieCard";
 
-const Movies = () => {
+const Movies = ({ navigation }) => {
 
     const [movieData, setMovieData] = useState();
     const [loading, setLoading] = useState(true);
@@ -25,8 +25,8 @@ const Movies = () => {
         fetchData()
     }, []);
 
-    const handleCardSelect = (url) => {
-        navigation.navigate('EpisodePage', { url })
+    const handleCardSelect = (item) => {
+        navigation.navigate('Detail', { item })
     };
 
     if (loading) {
