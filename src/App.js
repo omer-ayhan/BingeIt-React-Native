@@ -1,5 +1,5 @@
-import React from 'react';
-import {View} from 'react-native';
+import React from "react";
+import { Text, View } from "react-native";
 
 /**
  * Selamlar. Sizlerden istenen IMDB benzeri bir film analiz uygulaması geliştirmenizdir.
@@ -20,5 +20,9 @@ import {View} from 'react-native';
  * */
 
 export default function App() {
-  return <View>{/* ... */}</View>;
+  return (
+    <View>
+      <Text>New Project</Text>
+    </View>
+  );
 }
