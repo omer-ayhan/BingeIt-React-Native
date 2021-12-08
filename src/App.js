@@ -22,8 +22,7 @@ import { Text, View } from "react-native";
 export default function App() {
   return (
     <View>
-      <Text>New Project</Text>
-      <Text>New Project Alper</Text>
+      <Text>New Project Omer text</Text>
     </View>
   );
 }
