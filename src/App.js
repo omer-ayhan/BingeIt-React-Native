@@ -23,6 +23,7 @@ export default function App() {
   return (
     <View>
       <Text>New Project</Text>
+      <Text>New Project Alper</Text>
     </View>
   );
 }
