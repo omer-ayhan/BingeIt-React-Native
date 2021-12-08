@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Movies from './screens/Movies/Movies';
+import Movies from './screens/Movies';
 import Detail from './screens/Detail';
 
 /**
@@ -32,13 +32,13 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View>
+
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Movies" component={Movies} />
           <Stack.Screen name="Detail" component={Detail} />
         </Stack.Navigator>
       </NavigationContainer>
-    </View>
+
   );
 }
