@@ -23,6 +23,7 @@ export default function App() {
   return (
     <View>
       <Text>New Project Omer text</Text>
+      <Text>Second Text</Text>
     </View>
   );
 }
