@@ -24,6 +24,7 @@ export default function App() {
     <View>
       <Text>New Project</Text>
       <Text>New Project Alper</Text>
+      <Text>New Project Alper 2</Text>
     </View>
   );
 }
