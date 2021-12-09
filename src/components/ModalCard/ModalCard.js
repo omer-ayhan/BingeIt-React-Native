@@ -23,8 +23,8 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
     );
 
 
-    const renderItem = ({ item }) => (
-        <Item title={item} />
+    const renderItem = ({ item, index }) => (
+        <Item title={item} key={index} />
     );
     return (
         <Modal
