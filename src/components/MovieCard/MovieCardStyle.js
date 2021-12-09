@@ -34,6 +34,13 @@ export default StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     },
+    genre: {
+        margin: 2,
+        alignSelf: "center"
+    },
+    genreContainer: {
+        alignSelf: "center"
+    }
 
 
 });
