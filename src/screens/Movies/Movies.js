@@ -3,15 +3,17 @@ import { View, Text, FlatList } from "react-native";
 import styles from "./MoviesStyle"
 import axios from "axios";
 import MovieCard from "../../components/MovieCard";
-
+import FloatingButton from "../../components/FilterButton";
+import ModalCard from "../../components/ModalCard";
 const Movies = ({ navigation }) => {
 
+    const [modalVisible, setModalVisible] = useState(false)
     const [movieData, setMovieData] = useState();
     const [loading, setLoading] = useState(true);
-
+    const [genre, setGenre] = useState("");
     const fetchData = async () => {
         try {
-            const { data } = await axios.get("http://10.0.2.2:3000/movies");
+            const { data } = await axios.get(`http://10.0.2.2:3000/movies?q=${genre}`);
             setMovieData(data)
             setLoading(false);
         } catch (error) {
@@ -23,11 +25,20 @@ const Movies = ({ navigation }) => {
 
     useEffect(() => {
         fetchData()
-    }, []);
+    }, [genre]);
 
     const handleCardSelect = (item) => {
         navigation.navigate('Detail', { item })
     };
+    function handleModalVisible() {
+        setModalVisible(!modalVisible);
+    }
+
+    function handleSendContent(content) {
+        sendMessage(content)
+        handleModalVisible()
+
+    }
 
     if (loading) {
         return (
@@ -37,7 +48,7 @@ const Movies = ({ navigation }) => {
         )
     }
     return (
-        <View>
+        <View style={styles.container}>
 
             <FlatList
                 renderItem={({ item }) => <MovieCard data={item} onSelect={() => handleCardSelect(item)} />}
@@ -45,6 +56,12 @@ const Movies = ({ navigation }) => {
                 keyExtractor={item => item.id}
                 numColumns={"1"}
             />
+            <ModalCard
+                visible={modalVisible}
+                onClose={handleModalVisible}
+                onSelect={setGenre}
+            />
+            <FloatingButton iconName="plus" onPress={handleModalVisible} />
         </View>
     )
 };
