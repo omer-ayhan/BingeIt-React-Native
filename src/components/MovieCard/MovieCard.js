@@ -13,6 +13,7 @@ const MovieCard = ({ data, onSelect }) => {
                 <View style={styles.nameContainer}>
                     <Text style={styles.name}>{data.name}</Text>
                 </View>
+                <Text style={styles.brief} numberOfLines={2} >{data.brief} ...</Text>
                 <View style={styles.genreContainer}>
                     <FlatList numColumns={3} data={data.genre} renderItem={({ item, index }) => <Text style={styles.genre} key={index}>{item}</Text>} />
                 </View>

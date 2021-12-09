@@ -34,12 +34,6 @@ const Movies = ({ navigation }) => {
         setModalVisible(!modalVisible);
     }
 
-    function handleSendContent(content) {
-        sendMessage(content)
-        handleModalVisible()
-
-    }
-
     if (loading) {
         return (
             <View>
@@ -54,7 +48,6 @@ const Movies = ({ navigation }) => {
                 renderItem={({ item }) => <MovieCard data={item} onSelect={() => handleCardSelect(item)} />}
                 data={movieData}
                 keyExtractor={item => item.id}
-                numColumns={"1"}
             />
             <ModalCard
                 visible={modalVisible}

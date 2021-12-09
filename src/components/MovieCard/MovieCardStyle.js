@@ -40,6 +40,10 @@ export default StyleSheet.create({
     },
     genreContainer: {
         alignSelf: "center"
+    },
+    brief: {
+        marginHorizontal: 15,
+        marginVertical: 2
     }
 
 
