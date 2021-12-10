@@ -14,9 +14,11 @@ const Detail = () => {
     const [commentsData, setCommentsData] = useState();
     const [loadingComments, setLoadingComments] = useState(true);
     const [comment, setComment] = useState("");
+
+
     const fetchMovies = async () => {
         try {
-            const { data } = await axios.get(`http://10.0.2.2:3000/movies?q=${route.params.item.genre[0]}`);
+            const { data } = await axios.get(`http://10.0.2.2:3000/movies?genre_like=${route.params.item.genre.join('&genre_like=')}`);
             setMovieData(data)
             setLoading(false);
         } catch (error) {
@@ -42,9 +44,8 @@ const Detail = () => {
 
     const handleSendComment = async () => {
         const payload = { id: uuid.v4(), movieId: route.params.item.id, comment: comment };
-
-        await axios.post('http://10.0.2.2:3000/comments', payload);
-        fetchComments()
+        setCommentsData([...commentsData, payload])
+        setComment("")
     }
 
     const Item = ({ title }) => (
@@ -102,6 +103,7 @@ const Detail = () => {
                     style={styles.input}
                     onChangeText={setComment}
                     placeholder="Send Comment"
+                    value={comment}
                 />
                 <Button
                     onPress={handleSendComment}

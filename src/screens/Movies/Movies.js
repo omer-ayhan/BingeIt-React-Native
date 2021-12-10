@@ -11,9 +11,11 @@ const Movies = ({ navigation }) => {
     const [movieData, setMovieData] = useState();
     const [loading, setLoading] = useState(true);
     const [genre, setGenre] = useState("");
+
+
     const fetchData = async () => {
         try {
-            const { data } = await axios.get(`http://10.0.2.2:3000/movies?q=${genre}`);
+            const { data } = await axios.get(`http://10.0.2.2:3000/movies?genre_like=${genre}`);
             setMovieData(data)
             setLoading(false);
         } catch (error) {
