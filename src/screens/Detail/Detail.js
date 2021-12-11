@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, FlatList, TextInput, Button, Image } from "react-native";
-import styles from "./DetailStyle";
 import { useRoute } from "@react-navigation/native";
 import MovieCard from "../../components/MovieCard";
 import axios from "axios";
 import uuid from "react-native-uuid";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+
+import styles from "./DetailStyle";
+import Tag from "../../components/Tag";
 const Detail = () => {
   const route = useRoute();
 
@@ -56,9 +59,10 @@ const Detail = () => {
     setComment("");
   };
 
-  const Item = ({ title }) => <Text style={{ margin: 4 }}>{title}</Text>;
+  const Item = ({ title }) => <Text style={styles.genre}>{title}</Text>;
 
-  const renderItem = ({ item, index }) => <Item title={item} key={index} />;
+  const renderCast = ({ item, index }) => <Tag label={item} />;
+  const renderItem = ({ item, index }) => <Item title={item} />;
 
   const Comments = ({ item, index }) => (
     <View key={index}>
@@ -73,44 +77,42 @@ const Detail = () => {
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={{ uri: "https://source.unsplash.com/random/?movie,cinema" }}
-      />
+      <Image style={styles.image} source={require("../../assets/movie.png")} />
       <View style={styles.bodyContainer}>
         <Text style={styles.title}> {route.params.item.name}</Text>
         <View style={styles.altTitleContainer}>
-          <FlatList
-            horizontal={true}
-            data={route.params.item.genre}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.id}
-            horizontal={true}
-          />
-          <Text style={styles.rate}> {route.params.item.rate}</Text>
+          <View>
+            <FlatList
+              data={route.params.item.genre}
+              renderItem={renderItem}
+              keyExtractor={(item) => item.id}
+              horizontal={true}
+            />
+          </View>
+          <Icon name="star" size={25} color="#ffd700" />
+          <Text style={[styles.genre, styles.rate]}>
+            {" "}
+            {route.params.item.rate}
+          </Text>
         </View>
-        <Text style={styles.tagText}> {route.params.item.brief}</Text>
+        <Text style={styles.description}> {route.params.item.brief}</Text>
         <View style={styles.tagContainer}>
-          <Text style={styles.tagText}>DIRECTOR: </Text>
-          <Text style={styles.tagText}>{route.params.item.director}</Text>
+          <Text style={styles.tagTitle}>DIRECTOR: </Text>
+          <Tag label={route.params.item.director} />
         </View>
         <View style={styles.tagContainer}>
-          <Text>CAST: </Text>
+          <Text style={styles.tagTitle}>CAST: </Text>
           <FlatList
-            data={route.params.item.cast}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.id}
+            numColumns={2}
             // horizontal={true}
+            centerContent={true}
+            data={route.params.item.cast}
+            renderItem={renderCast}
+            keyExtractor={(item) => item.id}
           />
         </View>
       </View>
-      <View
-        style={[
-          styles.reviewContainer,
-          {
-            flex: 1,
-          },
-        ]}>
+      <View style={[styles.reviewContainer]}>
         <Text style={styles.reviewTitle}>REVIEWS</Text>
         <Text style={styles.reviewDesc}>36 Reviews</Text>
         <FlatList
@@ -131,13 +133,13 @@ const Detail = () => {
           color="#841584"
         />
       </View>
-      <View style={{ flex: 1 }}>
+      {/* <View style={{ flex: 1 }}>
         <FlatList
           renderItem={({ item }) => <MovieCard data={item} />}
           data={movieData}
           keyExtractor={(item, index) => index.toString()}
         />
-      </View>
+      </View> */}
     </View>
   );
 };
