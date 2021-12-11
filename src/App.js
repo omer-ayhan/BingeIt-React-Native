@@ -44,7 +44,14 @@ export default function App() {
             headerTintColor: colors.main,
           }}
         />
-        <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen
+          name="Detail"
+          component={Detail}
+          options={{
+            title: "Detail",
+            headerTintColor: colors.main,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
