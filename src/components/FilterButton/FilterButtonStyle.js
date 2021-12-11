@@ -3,19 +3,20 @@ const deviceSize = Dimensions.get("window")
 export default StyleSheet.create({
     container: {
         position: "absolute",
-        bottom: 10,
+        bottom: 5,
         right: deviceSize.width / 3,
         borderRadius: 10,
         width: deviceSize.width / 3,
-        height: 40,
+        height: 50,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#ffcccb",
+        backgroundColor: "rgba(251, 140, 0, 1)",
+        flexDirection: "row"
     },
     title: {
-        fontSize: 20,
-        color: "black",
-
+        fontSize: 28,
+        color: "white",
+        marginRight: 10
     }
 
 })
