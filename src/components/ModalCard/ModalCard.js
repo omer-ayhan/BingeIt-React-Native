@@ -4,7 +4,7 @@ import styles from "./ModalCardStyle"
 import Modal from "react-native-modal"
 
 
-const genres = ["ACTION", "COMEDY", "DRAMA", "FANTASY", "HORROR", "ROMANCE", "THRILLER",]
+const genres = ["ALLGENRES", "ACTION", "COMEDY", "DRAMA", "FANTASY", "HORROR", "ROMANCE", "THRILLER",]
 
 
 
