@@ -10,7 +10,7 @@ import StatusIndicator from "../StatusIndicator";
 import styles from "./CommentWrapper.styles";
 import stylesDef from "../../style/defaultStyles.styles";
 
-export default function CommentWrapper({ commentID }) {
+function CommentWrapper({ commentID }) {
   const [commentsData, setCommentsData] = useState([]);
   const [comment, setComment] = useState("");
 
@@ -98,3 +98,4 @@ export default function CommentWrapper({ commentID }) {
     </View>
   );
 }
+export default memo(CommentWrapper);

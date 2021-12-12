@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   View,
   Text,
@@ -55,4 +55,4 @@ const MovieCard = ({ data, onSelect }) => {
   );
 };
 
-export default MovieCard;
+export default memo(MovieCard);
