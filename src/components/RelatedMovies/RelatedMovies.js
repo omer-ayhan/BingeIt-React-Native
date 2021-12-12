@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { View, Text, FlatList } from "react-native";
 
 import useFetchEffect from "../../hooks/useFetchEffect";
@@ -7,7 +7,7 @@ import RelatedCard from "../RelatedCard";
 import StatusIndicator from "../StatusIndicator";
 import styles from "./RelatedMovies.styles";
 
-export default function RelatedMovies({ genre, movieId }) {
+function RelatedMovies({ genre, movieId }) {
   const urlDetail = `http://192.168.1.124:3000/movies?genre_like=${genre.join(
     "&genre_like=" // url for all the related genres in the movies data
   )}`;
@@ -65,3 +65,5 @@ export default function RelatedMovies({ genre, movieId }) {
     </View>
   );
 }
+
+export default memo(RelatedMovies);
