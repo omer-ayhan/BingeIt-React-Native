@@ -7,7 +7,6 @@ import {
   ImageBackground,
 } from "react-native";
 import styles from "./RelatedCardStyle";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Tag from "../Tag";
 import colors from "../../style/colors";
 

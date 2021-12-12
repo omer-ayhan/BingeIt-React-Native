@@ -1,10 +1,5 @@
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import Movies from "./screens/Movies";
-import Detail from "./screens/Detail";
-import colors from "./style/colors";
+import React from "react";
+import Navigation from "./navigation/Navigation";
 
 /**
  * Selamlar. Sizlerden istenen IMDB benzeri bir film analiz uygulaması geliştirmenizdir.
@@ -29,30 +24,6 @@ import colors from "./style/colors";
  * $ json-server --host 127.0.0.1 --watch <MOVIES JSON DOSYASININ KONUMU>
  * */
 
-const Stack = createNativeStackNavigator();
-
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Movies"
-          component={Movies}
-          options={{
-            title: "Movies",
-            headerTitleAlign: "center",
-            headerTintColor: colors.main,
-          }}
-        />
-        <Stack.Screen
-          name="Detail"
-          component={Detail}
-          options={{
-            title: "Detail",
-            headerTintColor: colors.main,
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  return <Navigation />;
 }
