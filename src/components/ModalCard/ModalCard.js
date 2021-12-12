@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { View, Text, TouchableOpacity, FlatList } from "react-native";
 import styles from "./ModalCardStyle";
 import Modal from "react-native-modal";
@@ -25,6 +25,8 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
     </TouchableOpacity>
   );
 
+  const extractId = (item, i) => `${item}||${i}`;
+
   const renderItem = ({ item, index }) => <Item title={item} key={index} />;
   return (
     <Modal
@@ -38,11 +40,11 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
         <FlatList
           data={genres}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={extractId}
         />
       </View>
     </Modal>
   );
 };
 
-export default ModalCard;
+export default memo(ModalCard);

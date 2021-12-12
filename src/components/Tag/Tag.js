@@ -15,7 +15,7 @@ export default function Tag({
 }) {
   return (
     <View style={[styles.container, containerStyle]}>
-      {iconName && <Icon name={iconName} size={iconSize} color={iconColor} />}
+      {!!iconName && <Icon name={iconName} size={iconSize} color={iconColor} />}
       <Text style={[styles.label, textStyle]}>{label}</Text>
     </View>
   );

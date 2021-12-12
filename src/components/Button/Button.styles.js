@@ -13,6 +13,7 @@ export default {
       backgroundColor: colors.main,
       borderRadius: 5,
       padding: 10,
+      paddingVertical: 15,
       marginVertical: 10,
       shadowColor: colors.black,
       shadowOffset: {
@@ -25,7 +26,7 @@ export default {
     },
     text: {
       color: colors.white,
-      fontSize: 20,
+      fontSize: 22,
       fontWeight: "bold",
     },
   }),
