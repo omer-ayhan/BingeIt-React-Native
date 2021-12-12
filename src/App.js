@@ -1,9 +1,10 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Movies from './screens/Movies';
-import Detail from './screens/Detail';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import Movies from "./screens/Movies";
+import Detail from "./screens/Detail";
+import colors from "./style/colors";
 
 /**
  * Selamlar. Sizlerden istenen IMDB benzeri bir film analiz uygulaması geliştirmenizdir.
@@ -32,13 +33,26 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Movies" component={Movies} />
-          <Stack.Screen name="Detail" component={Detail} />
-        </Stack.Navigator>
-      </NavigationContainer>
-
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Movies"
+          component={Movies}
+          options={{
+            title: "Movies",
+            headerTitleAlign: "center",
+            headerTintColor: colors.main,
+          }}
+        />
+        <Stack.Screen
+          name="Detail"
+          component={Detail}
+          options={{
+            title: "Detail",
+            headerTintColor: colors.main,
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
