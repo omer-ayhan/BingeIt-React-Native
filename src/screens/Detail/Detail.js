@@ -19,7 +19,10 @@ const Detail = () => {
         />
         <DetailLayout item={route.params.item} />
 
-        <RelatedMovies genre={route.params.item.genre} />
+        <RelatedMovies
+          genre={route.params.item.genre}
+          movieId={route.params.item.id}
+        />
       </View>
     </VirtualizedList>
   );

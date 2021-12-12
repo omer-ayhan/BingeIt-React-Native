@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text, FlatList } from "react-native";
 
 import useFetchEffect from "../../hooks/useFetchEffect";
@@ -7,11 +7,19 @@ import RelatedCard from "../RelatedCard";
 import StatusIndicator from "../StatusIndicator";
 import styles from "./RelatedMovies.styles";
 
-export default function RelatedMovies({ genre }) {
+export default function RelatedMovies({ genre, movieId }) {
   const urlDetail = `http://192.168.1.124:3000/movies?genre_like=${genre.join(
-    "&genre_like="
+    "&genre_like=" // url for all the
   )}`;
+  const [slicedData, setSlicedData] = React.useState([]);
   const { data: movieData, error, loading } = useFetchEffect(urlDetail);
+
+  useEffect(() => {
+    if (movieData)
+      setSlicedData(
+        movieData.slice(0, 5).filter((item) => item.id !== movieId)
+      );
+  }, [movieData]);
 
   if (error) {
     return (
@@ -51,7 +59,7 @@ export default function RelatedMovies({ genre }) {
         listKey="related"
         horizontal={true}
         renderItem={renderRelated}
-        data={movieData}
+        data={slicedData}
         keyExtractor={extractRelatedId}
       />
     </View>

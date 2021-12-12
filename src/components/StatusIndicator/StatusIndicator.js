@@ -7,7 +7,7 @@ import styles from "./StatusIndicator.styles";
 
 export default function StatusIndicator({
   text,
-  icon,
+  icon = null,
   iconSize = 20,
   iconColor = colors.dark,
   containerStyle,
