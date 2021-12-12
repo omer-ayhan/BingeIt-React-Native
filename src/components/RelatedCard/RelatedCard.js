@@ -6,6 +6,7 @@ import {
   FlatList,
   ImageBackground,
 } from "react-native";
+
 import styles from "./RelatedCardStyle";
 import Tag from "../Tag";
 import colors from "../../style/colors";
