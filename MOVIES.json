@@ -4,314 +4,181 @@
       "id": "b973a532-5553-11ec-bf63-0242ac130002",
       "name": "Enim Dolor Reprehenderit",
       "rate": 9.8,
-      "genre": [
-        "HORROR",
-        "THRILLER"
-      ],
+      "genre": ["HORROR", "THRILLER"],
       "director": "Quis Aliquip",
       "brief": "Occaecat elit quis officia ea. Culpa nisi cillum in ex est ea exercitation commodo excepteur aute. Non eu aliqua incididunt fugiat esse voluptate occaecat non tempor aliquip et. Amet id exercitation occaecat ad aliqua quis reprehenderit ut excepteur aliqua labore minim in exercitation. Anim elit pariatur anim esse labore mollit sint. Enim magna nulla pariatur magna elit proident irure sunt consectetur voluptate sit incididunt. Incididunt officia veniam cupidatat dolore voluptate sunt culpa dolor esse.",
-      "cast": [
-        "Mollit Reprehenderit",
-        "Fugiat Adipisicing",
-        "Pariatur Nostrud"
-      ]
+      "cast": ["Mollit Reprehenderit", "Fugiat Adipisicing", "Pariatur Nostrud"]
     },
     {
       "id": "b973a7d0-5553-11ec-bf63-0242ac130002",
       "name": "Eiusmod Ullamco",
       "rate": 9.5,
-      "genre": [
-        "COMEDY"
-      ],
+      "genre": ["COMEDY"],
       "director": "Occaecat Sunt Enim",
       "brief": "Culpa cupidatat reprehenderit anim aute incididunt ea duis. Voluptate ipsum Lorem quis velit. In dolore excepteur voluptate nisi veniam duis deserunt ex officia fugiat ea. Ullamco laborum proident enim sit ea duis. Amet duis duis deserunt dolor officia exercitation. Sunt quis magna duis in. Ipsum velit occaecat ipsum aliqua velit nostrud id ut ex mollit adipisicing consequat ea.",
-      "cast": [
-        "Tempor Ex Esse",
-        "Incididunt Aliquip",
-        "Reprehenderit Deserunt"
-      ]
+      "cast": ["Tempor Ex Esse", "Incididunt Aliquip", "Reprehenderit Deserunt"]
     },
     {
       "id": "b973a8f2-5553-11ec-bf63-0242ac130002",
       "name": "Tempor",
       "rate": 8.7,
-      "genre": [
-        "ROMANCE",
-        "COMEDY"
-      ],
+      "genre": ["ROMANCE", "COMEDY"],
       "director": "Laboris Ipsum",
       "brief": "Enim tempor aute dolore tempor eu elit aliqua excepteur cillum nisi nulla nulla deserunt excepteur. Labore ut qui duis occaecat minim sunt nulla enim in tempor reprehenderit laborum. Nostrud pariatur irure eu eiusmod tempor consequat ipsum commodo non dolor esse exercitation do sunt. Dolore est velit irure elit sit aliqua eiusmod aute quis in. Voluptate eu nulla enim amet reprehenderit veniam pariatur eu. Do ipsum in proident labore velit occaecat ullamco ut dolore fugiat. Voluptate cillum consequat voluptate aute qui laboris.",
-      "cast": [
-        "Nulla Et Dolor",
-        "Cillum Aute",
-        "Ex Id Magna"
-      ]
+      "cast": ["Nulla Et Dolor", "Cillum Aute", "Ex Id Magna"]
     },
     {
       "id": "b973a9ec-5553-11ec-bf63-0242ac130002",
       "name": "Voluptate",
       "rate": 6.5,
-      "genre": [
-        "HORROR"
-      ],
+      "genre": ["HORROR"],
       "director": "Sint Reprehenderit",
       "brief": "Dolor ex elit id enim qui sunt sit irure tempor duis consequat eiusmod commodo. Nisi exercitation sint laboris consequat officia duis reprehenderit sunt culpa voluptate fugiat culpa ipsum velit. Ut est cupidatat amet nisi. Incididunt pariatur sit proident reprehenderit et sint proident veniam anim. Dolore adipisicing non laborum cupidatat reprehenderit laborum. Voluptate elit voluptate esse ut in exercitation commodo do esse voluptate. Sunt sint voluptate nisi anim aliquip.",
-      "cast": [
-        "In Labore",
-        "Reprehenderit Nulla",
-        "Dolor Qui"
-      ]
+      "cast": ["In Labore", "Reprehenderit Nulla", "Dolor Qui"]
     },
     {
       "id": "b973ad7a-5553-11ec-bf63-0242ac130002",
       "name": "Fugiat Cupidatat",
       "rate": 9.1,
-      "genre": [
-        "ACTION"
-      ],
+      "genre": ["ACTION"],
       "director": "Mollit Non.",
       "brief": "Officia anim minim sint nisi commodo veniam. Ullamco consequat deserunt labore sit veniam nulla ipsum qui proident veniam reprehenderit nulla consequat incididunt. Aliquip magna irure quis est aliquip incididunt anim magna. Ullamco id ea elit dolor dolore dolor. Proident in eiusmod sint proident in laborum. Eu ut incididunt et in fugiat sunt dolor pariatur.",
-      "cast": [
-        "Fugiat Veniam",
-        "Proident Laboris",
-        "Exercitation Mollit"
-      ]
+      "cast": ["Fugiat Veniam", "Proident Laboris", "Exercitation Mollit"]
     },
     {
       "id": "b973ae88-5553-11ec-bf63-0242ac130002",
       "name": "Duis Excepteur",
       "rate": 7.5,
-      "genre": [
-        "ACTION",
-        "COMEDY"
-      ],
+      "genre": ["ACTION", "COMEDY"],
       "director": "Ea Dolor",
       "brief": "Fugiat voluptate aliquip reprehenderit quis aliquip consequat mollit fugiat. Veniam et est mollit ea. Eu pariatur amet pariatur quis aliqua exercitation fugiat elit sunt labore nisi ipsum. Commodo nulla laboris eu eu aute enim id elit ad cillum dolore nostrud anim. Ad officia proident enim ex dolore in nulla eiusmod laboris ex ad.",
-      "cast": [
-        "Fugiat Sunt",
-        "Ea Occaecat",
-        "Quis Eu"
-      ]
+      "cast": ["Fugiat Sunt", "Ea Occaecat", "Quis Eu"]
     },
     {
       "id": "b973af6e-5553-11ec-bf63-0242ac130002",
       "name": "Cillum",
       "rate": 8.3,
-      "genre": [
-        "THRILLER",
-        "DRAMA"
-      ],
+      "genre": ["THRILLER", "DRAMA"],
       "director": "Laborum Tempor",
       "brief": "Pariatur ex adipisicing id non eiusmod sit cillum Lorem elit culpa. Ipsum minim pariatur aute aliquip incididunt ipsum id aliquip dolore incididunt duis laboris consequat aliqua. Mollit ut cillum officia magna fugiat Lorem esse dolor. Eiusmod ullamco occaecat reprehenderit velit nulla tempor nisi laborum incididunt labore cillum sit.",
-      "cast": [
-        "Quis Nulla",
-        "Cillum Laboris",
-        "Eu Incididunt"
-      ]
+      "cast": ["Quis Nulla", "Cillum Laboris", "Eu Incididunt"]
     },
     {
       "id": "b973b04a-5553-11ec-bf63-0242ac130002",
       "name": "Sint Consectetur Eiusmod",
       "rate": 8,
-      "genre": [
-        "ACTION"
-      ],
+      "genre": ["ACTION"],
       "director": "Aliquip Proident",
       "brief": "Reprehenderit id ullamco Lorem id ut aliquip excepteur cupidatat aliquip duis cillum sint ullamco irure. Consequat eu est incididunt eiusmod commodo Lorem qui qui fugiat esse officia. Amet ea cillum sint eiusmod anim occaecat anim id elit cillum incididunt adipisicing culpa do. Cillum culpa incididunt laborum sint commodo sit magna. Duis enim occaecat incididunt amet mollit aute fugiat elit in occaecat enim voluptate reprehenderit elit.",
-      "cast": [
-        "Veniam Et",
-        "Duis Velit",
-        "Proident Dolor"
-      ]
+      "cast": ["Veniam Et", "Duis Velit", "Proident Dolor"]
     },
     {
       "id": "b973b13a-5553-11ec-bf63-0242ac130002",
       "name": "Do Et Anim Sint.",
       "rate": 9.1,
-      "genre": [
-        "FANTASY",
-        "HORROR"
-      ],
+      "genre": ["FANTASY", "HORROR"],
       "director": "Voluptate Incididunt",
       "brief": "Officia magna voluptate et consectetur magna culpa incididunt officia ex dolore. Quis eu veniam aute excepteur esse quis ad commodo enim fugiat. Ut officia duis enim culpa. Adipisicing consequat excepteur velit dolore esse eu culpa. Ad aute aliqua ullamco eu incididunt dolore.",
-      "cast": [
-        "Enim Officia",
-        "Eiusmod Amet",
-        "Cupidatat Proident"
-      ]
+      "cast": ["Enim Officia", "Eiusmod Amet", "Cupidatat Proident"]
     },
     {
       "id": "b973b216-5553-11ec-bf63-0242ac130002",
       "name": "Enim Minim",
       "rate": 8.4,
-      "genre": [
-        "FANTASY",
-        "COMEDY",
-        "ROMANCE"
-      ],
+      "genre": ["FANTASY", "COMEDY", "ROMANCE"],
       "director": "Minim Proident",
       "brief": "Ut ad id incididunt nostrud esse minim Lorem culpa ex elit commodo consequat consequat. Incididunt aute veniam Lorem magna do. Culpa magna sint id irure voluptate id aliquip magna officia reprehenderit tempor consequat. Laborum elit veniam nisi culpa excepteur fugiat do esse laboris et sint. Sit esse labore consectetur et nulla aliqua commodo. Eiusmod veniam et pariatur velit laborum proident duis voluptate reprehenderit nulla.",
-      "cast": [
-        "Exercitation Tempor",
-        "Ad Eiusmod",
-        "Reprehenderit Aliqua"
-      ]
+      "cast": ["Exercitation Tempor", "Ad Eiusmod", "Reprehenderit Aliqua"]
     },
     {
       "id": "b973b306-5553-11ec-bf63-0242ac130002",
       "name": "Esse",
       "rate": 7.7,
-      "genre": [
-        "COMEDY"
-      ],
+      "genre": ["COMEDY"],
       "director": "Culpa Irure",
       "brief": "Eiusmod est consequat ipsum veniam. Ullamco deserunt cupidatat magna do culpa esse incididunt id. Officia elit sunt in mollit ea eu pariatur sunt nisi ex id. Nostrud duis veniam exercitation consequat eu laboris laborum ex. Tempor reprehenderit in reprehenderit nisi veniam id aute sit et eiusmod cupidatat. Id aliqua elit ex enim sint. Consectetur esse aliqua in aute anim ex ad sint reprehenderit dolore tempor ipsum exercitation.",
-      "cast": [
-        "Reprehenderit Veniam",
-        "Aute Duis",
-        "Sit Do"
-      ]
+      "cast": ["Reprehenderit Veniam", "Aute Duis", "Sit Do"]
     },
     {
       "id": "b973b3ec-5553-11ec-bf63-0242ac130002",
       "name": "Non Ad Nulla",
       "rate": 6.5,
-      "genre": [
-        "HORROR",
-        "DRAMA"
-      ],
+      "genre": ["HORROR", "DRAMA"],
       "director": "Nisi Consectetur",
       "brief": "Eu et ea mollit occaecat reprehenderit incididunt ex. Dolore Lorem quis id cillum non minim consectetur dolore mollit. Deserunt incididunt elit sint aliqua id exercitation in. Voluptate exercitation aliqua exercitation esse incididunt Lorem veniam et do minim consectetur adipisicing. Ea dolore cupidatat voluptate do nisi tempor magna occaecat laboris laborum exercitation.",
-      "cast": [
-        "Id Lorem",
-        "Adipisicing Id",
-        "Esse Minim"
-      ]
+      "cast": ["Id Lorem", "Adipisicing Id", "Esse Minim"]
     },
     {
       "id": "b973b6ee-5553-11ec-bf63-0242ac130002",
       "name": "Exercitation",
       "rate": 9,
-      "genre": [
-        "HORROR",
-        "THRILLER"
-      ],
+      "genre": ["HORROR", "THRILLER"],
       "director": "Ut Cupidatat",
       "brief": "Exercitation non qui nisi est ipsum pariatur adipisicing do eiusmod laboris eu non. Amet ipsum nulla magna in incididunt dolor esse. Eu culpa pariatur quis do esse exercitation. Quis consequat nostrud Lorem occaecat do ex. Id est consequat amet nostrud qui esse incididunt commodo amet in. Aliquip eiusmod sint incididunt nostrud labore culpa ipsum. Ex Lorem laborum esse nostrud.",
-      "cast": [
-        "Pariatur Aute",
-        "Id Aute",
-        "Ut Pariatur"
-      ]
+      "cast": ["Pariatur Aute", "Id Aute", "Ut Pariatur"]
     },
     {
       "id": "b973b7de-5553-11ec-bf63-0242ac130002",
       "name": "Adipisicing Adipisicing Reprehenderit.",
       "rate": 7.9,
-      "genre": [
-        "THRILLER"
-      ],
+      "genre": ["THRILLER"],
       "director": "Quis Officia",
       "brief": "Veniam do sit eu ut nisi officia. Ipsum quis officia ea sint velit consectetur dolor Lorem. Labore consequat nulla labore pariatur laborum ex velit. Cupidatat aute incididunt qui minim voluptate incididunt excepteur. Id ex duis mollit nisi commodo veniam eiusmod et deserunt pariatur.",
-      "cast": [
-        "Incididunt Adipisicing",
-        "Eu Dolor",
-        "Dolor Elit"
-      ]
+      "cast": ["Incididunt Adipisicing", "Eu Dolor", "Dolor Elit"]
     },
     {
       "id": "b973b8c4-5553-11ec-bf63-0242ac130002",
       "name": "Id",
       "rate": 6.9,
-      "genre": [
-        "ROMANCE"
-      ],
+      "genre": ["ROMANCE"],
       "director": "Exercitation Excepteur",
       "brief": "Exercitation consectetur do consectetur non amet do mollit est esse dolor aliquip commodo excepteur. Do duis eiusmod culpa Lorem excepteur do sunt voluptate anim labore quis consequat esse. Nostrud consequat nulla eiusmod Lorem nostrud proident incididunt sunt esse aliqua. Laborum ipsum excepteur anim irure aliqua minim exercitation voluptate voluptate aute occaecat exercitation non. Aliquip amet commodo esse officia cillum velit. Deserunt sit occaecat velit ipsum aute aliqua.",
-      "cast": [
-        "Qui Et",
-        "Do Voluptate",
-        "Qui Cupidatat"
-      ]
+      "cast": ["Qui Et", "Do Voluptate", "Qui Cupidatat"]
     },
     {
       "id": "b973ba18-5553-11ec-bf63-0242ac130002",
       "name": "Exercitation Aliquip.",
       "rate": 9.9,
-      "genre": [
-        "FANTASY"
-      ],
+      "genre": ["FANTASY"],
       "director": "Exercitation Excepteur",
       "brief": "Adipisicing veniam id ipsum enim anim laborum est. Ipsum ad dolor eiusmod aute deserunt non labore tempor qui. Dolore cupidatat ex incididunt magna.",
-      "cast": [
-        "Consequat Aute",
-        "In Commodo",
-        "Ut In"
-      ]
+      "cast": ["Consequat Aute", "In Commodo", "Ut In"]
     },
     {
       "id": "b973bb30-5553-11ec-bf63-0242ac130002",
       "name": "Nulla",
       "rate": 5.5,
-      "genre": [
-        "ACTION",
-        "HORROR",
-        "THRILLER"
-      ],
+      "genre": ["ACTION", "HORROR", "THRILLER"],
       "director": "Pariatur Fugiat",
       "brief": "Elit voluptate incididunt cillum commodo ad non excepteur. Dolor dolor occaecat excepteur proident aute minim. Dolor ex sunt veniam amet incididunt magna aliquip. Voluptate eiusmod nostrud excepteur quis quis. Ipsum aute dolor enim ut veniam labore. Sit duis nulla velit anim nisi enim dolore. Quis enim duis labore ut id velit ullamco.",
-      "cast": [
-        "Ut Aute",
-        "Aute Laboris",
-        "Ea Fugiat"
-      ]
+      "cast": ["Ut Aute", "Aute Laboris", "Ea Fugiat"]
     },
     {
       "id": "b973bc0c-5553-11ec-bf63-0242ac130002",
       "name": "Minim Magna",
       "rate": 8,
-      "genre": [
-        "DRAMA"
-      ],
+      "genre": ["DRAMA"],
       "director": "Laborum Pariatur",
       "brief": "Nostrud labore magna ea consectetur sint aliqua non cillum velit. Esse ad ad est excepteur ex ipsum reprehenderit eiusmod aliquip. Velit veniam eu consectetur est ipsum aliqua aute eu consequat cupidatat.",
-      "cast": [
-        "Consequat Do",
-        "Non Ipsum",
-        "Minim Aliqua"
-      ]
+      "cast": ["Consequat Do", "Non Ipsum", "Minim Aliqua"]
     },
     {
       "id": "b973bce8-5553-11ec-bf63-0242ac130002",
       "name": "Voluptate Dolor",
       "rate": 7.1,
-      "genre": [
-        "COMEDY",
-        "ACTION"
-      ],
+      "genre": ["COMEDY", "ACTION"],
       "director": "Nostrud Sint",
       "brief": "Pariatur minim ad anim laboris in dolor in amet. Exercitation nisi magna cupidatat laborum exercitation veniam deserunt. Excepteur ex aliquip dolor cupidatat nostrud magna excepteur.",
-      "cast": [
-        "Excepteur Exercitation",
-        "Pariatur Ad",
-        "Est Anim"
-      ]
+      "cast": ["Excepteur Exercitation", "Pariatur Ad", "Est Anim"]
     },
     {
       "id": "b973bdc4-5553-11ec-bf63-0242ac130002",
       "name": "Officia Officia",
       "rate": 9.2,
-      "genre": [
-        "THRILLER",
-        "DRAMA"
-      ],
+      "genre": ["THRILLER", "DRAMA"],
       "director": "Esse Ea",
       "brief": "Pariatur tempor qui non veniam. Anim dolor minim proident ea sunt sint eu fugiat dolor enim laboris eu. Commodo cupidatat nulla consectetur irure reprehenderit ipsum anim tempor mollit occaecat occaecat cupidatat cupidatat veniam. Lorem id fugiat aliquip magna pariatur consectetur velit adipisicing excepteur ea enim elit. Non in id minim exercitation officia consectetur. Consectetur laboris id est eiusmod non in voluptate officia amet culpa aliquip sunt tempor.",
-      "cast": [
-        "Ut Qui",
-        "Pariatur Dolore",
-        "Ad Ea"
-      ]
+      "cast": ["Ut Qui", "Pariatur Dolore", "Ad Ea"]
     }
   ],
   "comments": [
@@ -514,11 +381,6 @@
       "id": "a4f1bcb2-5557-11ec-bf63-0242ac130002",
       "movieId": "b973b306-5553-11ec-bf63-0242ac130002",
       "comment": "Ut consectetur minim excepteur voluptate ullamco sint anim laboris consequat. Reprehenderit do pariatur ullamco tempor velit irure. Irure eiusmod pariatur commodo culpa quis dolore. Laboris aliqua nostrud excepteur magna ea eu sit exercitation excepteur dolore non. Qui dolore dolor consequat duis nulla esse deserunt dolor proident officia pariatur labore elit consequat."
-    },
-    {
-      "id": "f449c03d-6b47-418d-a98d-6780e06045b1",
-      "movieId": "b973a532-5553-11ec-bf63-0242ac130002",
-      "comment": "aatwadwawadw"
     }
   ],
   "genres": [

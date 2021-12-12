@@ -1,13 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, FlatList, TextInput, Button, Image } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  TextInput,
+  Image,
+  ScrollView,
+} from "react-native";
 import { useRoute } from "@react-navigation/native";
-import MovieCard from "../../components/MovieCard";
 import axios from "axios";
 import uuid from "react-native-uuid";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import styles from "./DetailStyle";
+import RelatedCard from "../../components/RelatedCard";
+import MovieCard from "../../components/MovieCard";
 import Tag from "../../components/Tag";
+import VirtualizedList from "../../components/VirtulizedList";
+import styles from "./DetailStyle";
+import Comments from "../../components/Comments";
+import Button from "../../components/Button";
 const Detail = () => {
   const route = useRoute();
 
@@ -59,88 +70,97 @@ const Detail = () => {
     setComment("");
   };
 
-  const Item = ({ title }) => <Text style={styles.genre}>{title}</Text>;
-
   const renderCast = ({ item, index }) => <Tag label={item} />;
-  const renderItem = ({ item, index }) => <Item title={item} />;
-
-  const Comments = ({ item, index }) => (
-    <View key={index}>
-      <Text>Comment {index + 1}:</Text>
-      <Text style={{ margin: 4 }}>{item.comment}</Text>
-    </View>
-  );
 
   const renderComments = ({ item, index }) => (
     <Comments item={item} index={index} />
   );
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={require("../../assets/movie.png")} />
-      <View style={styles.bodyContainer}>
-        <Text style={styles.title}> {route.params.item.name}</Text>
-        <View style={styles.altTitleContainer}>
-          <View>
+    <VirtualizedList>
+      <View style={styles.container}>
+        <Image
+          style={styles.image}
+          source={require("../../assets/movie.png")}
+        />
+        <View style={styles.bodyContainer}>
+          <Text style={styles.title}> {route.params.item.name}</Text>
+          <View style={styles.altTitleContainer}>
+            <View
+              style={{
+                flexDirection: "row",
+                flexWrap: "wrap",
+              }}>
+              {route.params.item.genre.map((item) => (
+                <Text key={uuid.v4().toString()} style={styles.genre}>
+                  {item}
+                </Text>
+              ))}
+            </View>
+            <Icon name="star" size={25} color="#ffd700" />
+            <Text style={[styles.genre, styles.rate]}>
+              {" "}
+              {route.params.item.rate}
+            </Text>
+          </View>
+          <Text style={styles.description}> {route.params.item.brief}</Text>
+          <View style={styles.tagContainer}>
+            <Text style={styles.tagTitle}>DIRECTOR: </Text>
+            <Tag label={route.params.item.director} />
+          </View>
+          <View style={styles.tagContainer}>
+            <Text style={styles.tagTitle}>CAST: </Text>
             <FlatList
-              data={route.params.item.genre}
-              renderItem={renderItem}
-              keyExtractor={(item) => item.id}
-              horizontal={true}
+              listKey="cast"
+              numColumns={2}
+              centerContent={true}
+              data={route.params.item.cast}
+              renderItem={renderCast}
+              keyExtractor={(item, index) => `${item}?___?${index}`}
             />
           </View>
-          <Icon name="star" size={25} color="#ffd700" />
-          <Text style={[styles.genre, styles.rate]}>
-            {" "}
-            {route.params.item.rate}
-          </Text>
+          <View style={[styles.reviewContainer]}>
+            <Text style={styles.reviewTitle}>REVIEWS</Text>
+            <Text style={styles.reviewDesc}>
+              {commentsData?.length} Reviews
+            </Text>
+            <View>
+              <FlatList
+                listKey="review"
+                data={commentsData}
+                renderItem={renderComments}
+                keyExtractor={(_, index) => `${index + 1}?__|_?${index}`}
+              />
+            </View>
+            <View style={styles.addReviewContainer}>
+              <TextInput
+                style={styles.input}
+                onChangeText={setComment}
+                placeholder="Send Comment"
+                value={comment}
+                multiline
+              />
+              <Button onPress={handleSendComment} title="Send Comment" />
+            </View>
+          </View>
         </View>
-        <Text style={styles.description}> {route.params.item.brief}</Text>
-        <View style={styles.tagContainer}>
-          <Text style={styles.tagTitle}>DIRECTOR: </Text>
-          <Tag label={route.params.item.director} />
-        </View>
-        <View style={styles.tagContainer}>
-          <Text style={styles.tagTitle}>CAST: </Text>
+        <View
+          style={{
+            flex: 1,
+            alignItems: "center",
+            backgroundColor: "transparent",
+          }}>
+          <Text style={styles.reviewTitle}>Related</Text>
           <FlatList
-            numColumns={2}
-            // horizontal={true}
-            centerContent={true}
-            data={route.params.item.cast}
-            renderItem={renderCast}
-            keyExtractor={(item) => item.id}
+            listKey="related"
+            horizontal={true}
+            renderItem={({ item }) => <RelatedCard data={item} />}
+            data={movieData}
+            keyExtractor={(_) => uuid.v4().toString()}
           />
         </View>
       </View>
-      <View style={[styles.reviewContainer]}>
-        <Text style={styles.reviewTitle}>REVIEWS</Text>
-        <Text style={styles.reviewDesc}>36 Reviews</Text>
-        <FlatList
-          data={commentsData}
-          renderItem={renderComments}
-          keyExtractor={(item, index) => index.toString()}
-        />
-        <TextInput
-          style={styles.input}
-          onChangeText={setComment}
-          placeholder="Send Comment"
-          value={comment}
-        />
-        <Button
-          style={styles.button}
-          onPress={handleSendComment}
-          title="Send Comment"
-          color="#841584"
-        />
-      </View>
-      {/* <View style={{ flex: 1 }}>
-        <FlatList
-          renderItem={({ item }) => <MovieCard data={item} />}
-          data={movieData}
-          keyExtractor={(item, index) => index.toString()}
-        />
-      </View> */}
-    </View>
+    </VirtualizedList>
   );
 };
 

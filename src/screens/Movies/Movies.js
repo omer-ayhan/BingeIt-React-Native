@@ -41,12 +41,15 @@ const Movies = ({ navigation }) => {
       </View>
     );
   }
+
+  const renderMovieCard = ({ item }) => (
+    <MovieCard data={item} onSelect={() => handleCardSelect(item)} />
+  );
+
   return (
     <View style={styles.container}>
       <FlatList
-        renderItem={({ item }) => (
-          <MovieCard data={item} onSelect={() => handleCardSelect(item)} />
-        )}
+        renderItem={renderMovieCard}
         data={movieData}
         keyExtractor={(item) => item.id}
       />

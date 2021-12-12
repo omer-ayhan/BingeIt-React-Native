@@ -1,6 +1,8 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 import colors from "../../style/colors";
+
+const deviceSize = Dimensions.get("window");
 
 export default StyleSheet.create({
   container: {
@@ -70,11 +72,26 @@ export default StyleSheet.create({
     flexDirection: "row",
   },
   reviewContainer: {
-    display: "none",
+    alignItems: "center",
+  },
+  reviewTitle: {
+    fontSize: 25,
+    fontWeight: "bold",
+    color: colors.dark,
+  },
+  reviewDesc: {
+    fontSize: 17,
+    color: colors.gray,
   },
   input: {
-    borderWidth: 0.5,
-    borderRadius: 10,
+    padding: 20,
     paddingLeft: 5,
+    borderRadius: 10,
+    backgroundColor: colors.lighterGray,
+    fontSize: 15,
+  },
+  addReviewContainer: {
+    width: deviceSize.width - 40,
+    marginVertical: 15,
   },
 });
