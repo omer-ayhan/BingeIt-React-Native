@@ -10,6 +10,8 @@ import styles from "./MovieCardStyle";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const MovieCard = ({ data, onSelect }) => {
+  const commaSeperator = () => <Text style={styles.genre}>, </Text>;
+
   return (
     <TouchableWithoutFeedback onPress={onSelect}>
       <View>
@@ -22,9 +24,7 @@ const MovieCard = ({ data, onSelect }) => {
             <Text style={styles.name}>{data.name}</Text>
             <View style={styles.genres}>
               <FlatList
-                ItemSeparatorComponent={() => (
-                  <Text style={styles.genre}>, </Text>
-                )}
+                ItemSeparatorComponent={commaSeperator}
                 horizontal={true}
                 data={data.genre}
                 renderItem={({ item, index }) => (

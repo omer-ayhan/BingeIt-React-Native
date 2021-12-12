@@ -14,6 +14,14 @@ export default StyleSheet.create({
     justifyContent: "flex-end",
     margin: 0,
   },
+  genreButton: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 5,
+    marginHorizontal: 20,
+    borderBottomWidth: 0.5,
+    borderColor: colors.gray,
+  },
   title: {
     color: colors.dark,
     fontSize: 17,

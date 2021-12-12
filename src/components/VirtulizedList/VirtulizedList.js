@@ -3,10 +3,12 @@ import { FlatList } from "react-native";
 import uuid from "react-native-uuid";
 
 const VirtualizedList = ({ children }) => {
+  const extractId = (_, i) => uuid.v4().toString();
+
   return (
     <FlatList
       data={[]}
-      keyExtractor={(_, i) => uuid.v4().toString()}
+      keyExtractor={extractId}
       renderItem={null}
       ListHeaderComponent={<>{children}</>}
     />

@@ -1,3 +1,7 @@
+/**
+ * default colors for the app
+ * */
+
 export default {
   white: "#ffffff",
   main: "#FB8C00",
