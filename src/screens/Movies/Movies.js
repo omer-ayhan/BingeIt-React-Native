@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import styles from "./MoviesStyle";
@@ -62,6 +62,14 @@ const Movies = () => {
     />
   );
 
+  const handleGenre = (title) => {
+    if (title === "ALL GENRES") {
+      setGenre("");
+      return;
+    }
+    setGenre(title);
+  };
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -73,7 +81,7 @@ const Movies = () => {
       <ModalCard
         visible={modalVisible}
         onClose={handleModalVisible}
-        onSelect={setGenre}
+        onSelect={handleGenre}
       />
       <FloatingButton iconName="plus" onPress={handleModalVisible} />
     </View>

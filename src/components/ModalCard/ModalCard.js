@@ -4,6 +4,7 @@ import styles from "./ModalCardStyle";
 import Modal from "react-native-modal";
 
 const genres = [
+  "ALL GENRES",
   "ACTION",
   "COMEDY",
   "DRAMA",
@@ -20,7 +21,9 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
   };
 
   const Item = ({ title }) => (
-    <TouchableOpacity style={styles.title} onPress={() => handleSelect(title)}>
+    <TouchableOpacity
+      style={styles.genreButton}
+      onPress={() => handleSelect(title)}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
