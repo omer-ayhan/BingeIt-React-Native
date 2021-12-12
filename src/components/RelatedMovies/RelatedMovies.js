@@ -9,16 +9,16 @@ import styles from "./RelatedMovies.styles";
 
 export default function RelatedMovies({ genre, movieId }) {
   const urlDetail = `http://192.168.1.124:3000/movies?genre_like=${genre.join(
-    "&genre_like=" // url for all the
+    "&genre_like=" // url for all the related genres in the movies data
   )}`;
   const [slicedData, setSlicedData] = React.useState([]);
   const { data: movieData, error, loading } = useFetchEffect(urlDetail);
 
   useEffect(() => {
-    if (movieData)
-      setSlicedData(
-        movieData.slice(0, 5).filter((item) => item.id !== movieId)
-      );
+    if (movieData) {
+      const filteredData = movieData.filter((movie) => movie.id !== movieId);
+      setSlicedData(filteredData.slice(0, 4));
+    }
   }, [movieData]);
 
   if (error) {

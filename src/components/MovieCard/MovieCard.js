@@ -6,6 +6,7 @@ import {
   FlatList,
   ImageBackground,
 } from "react-native";
+
 import styles from "./MovieCardStyle";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
