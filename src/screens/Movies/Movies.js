@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import styles from "./MoviesStyle";
+import styles from "./Movies.styles";
 import MovieCard from "../../components/MovieCard";
 import FloatingButton from "../../components/FilterButton";
 import ModalCard from "../../components/ModalCard";
@@ -57,7 +57,7 @@ const Movies = () => {
 
   const renderEmpty = () => (
     <StatusIndicator
-      text="No Movies"
+      text="No Movies Found"
       icon="delete-empty"
       iconColor={colors.info}
       iconSize={60}
