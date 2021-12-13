@@ -28,4 +28,7 @@ export default StyleSheet.create({
     fontWeight: "bold",
     marginVertical: 1,
   },
+  selected: {
+    color: colors.main,
+  },
 });

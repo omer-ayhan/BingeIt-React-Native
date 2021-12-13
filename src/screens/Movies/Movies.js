@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { View, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -14,8 +14,10 @@ import useFetchEffect from "../../hooks/useFetchEffect";
 const Movies = () => {
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
-  const [genre, setGenre] = useState("");
-  const url = `http://192.168.1.124:3000/movies?genre_like=${genre}`;
+  const [genre, setGenre] = useState("ALL GENRES");
+  const url = `http://192.168.1.124:3000/movies?genre_like=${
+    genre === "ALL GENRES" ? "" : genre
+  }`;
   const { data: movieData, loading, error } = useFetchEffect(url, [genre]);
 
   const handleCardSelect = (item) => {
@@ -63,22 +65,24 @@ const Movies = () => {
   );
 
   const handleGenre = (title) => {
-    if (title === "ALL GENRES") {
-      setGenre("");
-      return;
-    }
+    // if (title === "ALL GENRES") {
+    //   setGenre("");
+    //   return;
+    // }
     setGenre(title);
   };
 
   return (
     <View style={styles.container}>
       <FlatList
+        removeClippedSubviews
         renderItem={renderMovieCard}
         data={movieData}
         keyExtractor={extractId}
         ListEmptyComponent={renderEmpty}
       />
       <ModalCard
+        genre={genre}
         visible={modalVisible}
         onClose={handleModalVisible}
         onSelect={handleGenre}

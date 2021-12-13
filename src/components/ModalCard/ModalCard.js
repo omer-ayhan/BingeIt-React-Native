@@ -14,25 +14,28 @@ const genres = [
   "THRILLER",
 ];
 
-const ModalCard = ({ visible, onClose, onSelect }) => {
+const ModalCard = ({ visible, onClose, onSelect, genre }) => {
   const handleSelect = (title) => {
     onSelect(title);
     onClose();
   };
 
-  const Category = ({ title }) => (
+  const Category = memo(({ title }) => (
     <TouchableOpacity
       style={styles.genreButton}
       onPress={() => handleSelect(title)}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={[styles.title, title === genre && styles.selected]}>
+        {title}
+      </Text>
     </TouchableOpacity>
-  );
+  ));
 
   const extractId = (item, i) => `${item}||${i}`;
 
   const renderCategories = ({ item, index }) => (
     <Category title={item} key={index} />
   );
+
   return (
     <Modal
       style={styles.modal}
@@ -52,4 +55,4 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
   );
 };
 
-export default memo(ModalCard);
+export default ModalCard;
