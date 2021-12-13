@@ -24,7 +24,7 @@
 
 - if you are using your physical device: `json-server --host YOUR MACHINE'S WIFI IP --watch MOVIES.json`
 
-- finally start ``yarn android` or `yarn ios` depending on the platform you are running
+- finally start `yarn android` or `yarn ios` depending on the platform you are running
 
 # Tools & Resources
 
