@@ -20,7 +20,7 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
     onClose();
   };
 
-  const Item = ({ title }) => (
+  const Category = ({ title }) => (
     <TouchableOpacity
       style={styles.genreButton}
       onPress={() => handleSelect(title)}>
@@ -30,7 +30,9 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
 
   const extractId = (item, i) => `${item}||${i}`;
 
-  const renderItem = ({ item, index }) => <Item title={item} key={index} />;
+  const renderCategories = ({ item, index }) => (
+    <Category title={item} key={index} />
+  );
   return (
     <Modal
       style={styles.modal}
@@ -42,7 +44,7 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
       <View style={styles.container}>
         <FlatList
           data={genres}
-          renderItem={renderItem}
+          renderItem={renderCategories}
           keyExtractor={extractId}
         />
       </View>
