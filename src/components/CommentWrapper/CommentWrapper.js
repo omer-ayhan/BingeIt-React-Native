@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { View, Text, FlatList, TextInput } from "react-native";
 import uuid from "react-native-uuid";
 
@@ -25,7 +25,7 @@ function CommentWrapper({ commentID }) {
   if (error) {
     return (
       <StatusIndicator
-        text="An error has occurred"
+        text={`Error: ${error.message}`}
         icon="alert-circle"
         iconColor={colors.danger}
         iconSize={60}

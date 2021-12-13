@@ -16,7 +16,7 @@ function RelatedMovies({ genre, movieId }) {
 
   useEffect(() => {
     if (movieData) {
-      const filteredData = movieData.filter((movie) => movie.id !== movieId);
+      const filteredData = movieData.filter((movie) => movie.id !== movieId); // filter the data to remove the current movie
       setSlicedData(filteredData.slice(0, 4));
     }
   }, [movieData]);
@@ -24,7 +24,7 @@ function RelatedMovies({ genre, movieId }) {
   if (error) {
     return (
       <StatusIndicator
-        text="An error has occurred"
+        text={`Error: ${error.message}`}
         icon="alert-circle"
         iconColor={colors.danger}
         iconSize={60}
