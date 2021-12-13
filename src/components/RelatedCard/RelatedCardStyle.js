@@ -38,36 +38,19 @@ export default StyleSheet.create({
     alignItems: "center",
     margin: 2,
   },
-  genre: {
+  genreItem: {
     color: "rgba(189, 189, 189, 1)",
   },
-  brief: {
-    alignSelf: "center",
-    color: "white",
-    fontSize: 16,
-    marginHorizontal: 10,
-  },
 
-  director: {
-    color: "white",
-    fontSize: 16,
-    marginLeft: 5,
-  },
-  rate: {
-    color: "white",
-    fontSize: 16,
-    marginLeft: 5,
-  },
   card: {
-    width: 90,
-    paddingHorizontal: 10,
+    width: 105,
+    paddingHorizontal: 11,
     paddingVertical: 5,
     borderRadius: 20,
     backgroundColor: "rgba(81, 81, 81, 1)",
     marginHorizontal: 5,
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center",
     alignSelf: "center",
     marginVertical: 10,
   },

@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from "react";
+import React, { useEffect } from "react";
 import { View, Text, FlatList } from "react-native";
 
 import useFetchEffect from "../../hooks/useFetchEffect";
@@ -54,7 +54,7 @@ function RelatedMovies({ genre, movieId }) {
         alignItems: "center",
         backgroundColor: "transparent",
       }}>
-      <Text style={styles.title}>Related</Text>
+      <Text style={styles.title}>RELATED</Text>
       <FlatList
         listKey="related"
         horizontal={true}
@@ -66,4 +66,4 @@ function RelatedMovies({ genre, movieId }) {
   );
 }
 
-export default memo(RelatedMovies);
+export default RelatedMovies;

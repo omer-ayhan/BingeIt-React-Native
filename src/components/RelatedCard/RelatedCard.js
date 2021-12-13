@@ -20,6 +20,14 @@ const RelatedCard = ({ data, onSelect }) => {
   const name =
     data.name.length > 15 ? data.name.slice(0, 15) + "..." : data.name;
 
+  const commaSeperator = () => <Text style={styles.genreItem}>, </Text>;
+
+  const renderGenre = ({ item, index }) => (
+    <Text style={styles.genreItem} key={index}>
+      {item}
+    </Text>
+  );
+
   return (
     <TouchableWithoutFeedback onPress={onSelect}>
       <ImageBackground
@@ -32,16 +40,10 @@ const RelatedCard = ({ data, onSelect }) => {
             <Text style={styles.name}>{name}</Text>
             <View style={styles.genres}>
               <FlatList
-                ItemSeparatorComponent={() => (
-                  <Text style={styles.genre}>, </Text>
-                )}
+                ItemSeparatorComponent={commaSeperator}
                 horizontal={true}
                 data={data.genre}
-                renderItem={({ item, index }) => (
-                  <Text style={styles.genre} key={index}>
-                    {item}
-                  </Text>
-                )}
+                renderItem={renderGenre}
               />
             </View>
             <Tag

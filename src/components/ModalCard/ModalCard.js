@@ -1,38 +1,51 @@
-import React, { memo } from "react";
-import { View, Text, TouchableOpacity, FlatList } from "react-native";
-import styles from "./ModalCardStyle";
+import React from "react";
+import { View, FlatList } from "react-native";
 import Modal from "react-native-modal";
+import useFetchEffect from "../../hooks/useFetchEffect";
+import colors from "../../style/colors";
+import Category from "../Category";
+import StatusIndicator from "../StatusIndicator";
 
-const genres = [
-  "ALL GENRES",
-  "ACTION",
-  "COMEDY",
-  "DRAMA",
-  "FANTASY",
-  "HORROR",
-  "ROMANCE",
-  "THRILLER",
-];
+import styles from "./ModalCardStyle";
 
-const ModalCard = ({ visible, onClose, onSelect }) => {
-  const handleSelect = (title) => {
-    onSelect(title);
-    onClose();
-  };
+const ModalCard = ({ visible, onClose, onSelect, genre }) => {
+  const urlGenres = "http://192.168.1.124:3000/genres";
 
-  const Category = ({ title }) => (
-    <TouchableOpacity
-      style={styles.genreButton}
-      onPress={() => handleSelect(title)}>
-      <Text style={styles.title}>{title}</Text>
-    </TouchableOpacity>
-  );
+  const { data: allGenres, loading, error } = useFetchEffect(urlGenres);
+
+  if (loading) {
+    return (
+      <StatusIndicator
+        text="Loading..."
+        icon="clock-time-eight"
+        iconColor={colors.main}
+        iconSize={60}
+      />
+    );
+  }
+
+  if (error) {
+    return (
+      <StatusIndicator
+        text={`Error: ${error.message}`}
+        icon="alert-circle"
+        iconColor={colors.danger}
+        iconSize={60}
+      />
+    );
+  }
 
   const extractId = (item, i) => `${item}||${i}`;
 
-  const renderCategories = ({ item, index }) => (
-    <Category title={item} key={index} />
+  const renderCategories = ({ item }) => (
+    <Category
+      title={item.name}
+      onSelect={onSelect}
+      onClose={onClose}
+      genre={genre}
+    />
   );
+
   return (
     <Modal
       style={styles.modal}
@@ -43,7 +56,7 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
       swipeDirection="down">
       <View style={styles.container}>
         <FlatList
-          data={genres}
+          data={allGenres}
           renderItem={renderCategories}
           keyExtractor={extractId}
         />
@@ -52,4 +65,4 @@ const ModalCard = ({ visible, onClose, onSelect }) => {
   );
 };
 
-export default memo(ModalCard);
+export default ModalCard;
