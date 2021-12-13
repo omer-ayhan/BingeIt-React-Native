@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { View, FlatList } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -13,12 +13,12 @@ import useFetchEffect from "../../hooks/useFetchEffect";
 
 const Movies = () => {
   const navigation = useNavigation();
+  const [filteredMovies, setFilteredMovies] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [genre, setGenre] = useState("ALL GENRES");
-  const url = `http://192.168.1.124:3000/movies?genre_like=${
-    genre === "ALL GENRES" ? "" : genre
-  }`;
-  const { data: movieData, loading, error } = useFetchEffect(url, [genre]);
+
+  const url = `http://192.168.1.124:3000/movies`;
+  const { data: movieData, loading, error } = useFetchEffect(url);
 
   const handleCardSelect = (item) => {
     navigation.navigate(routes.DETAIL, { item });
@@ -64,12 +64,12 @@ const Movies = () => {
     />
   );
 
-  const handleGenre = (title) => {
-    // if (title === "ALL GENRES") {
-    //   setGenre("");
-    //   return;
-    // }
+  const mainMovieData = !!filteredMovies.length ? filteredMovies : movieData; // if filteredMovies is not empty, use it, else use movieData
+
+  const handleGenreFilter = (title) => {
     setGenre(title);
+    const filtered = movieData.filter((movie) => movie.genre.includes(title));
+    setFilteredMovies(filtered);
   };
 
   return (
@@ -77,7 +77,7 @@ const Movies = () => {
       <FlatList
         removeClippedSubviews
         renderItem={renderMovieCard}
-        data={movieData}
+        data={mainMovieData}
         keyExtractor={extractId}
         ListEmptyComponent={renderEmpty}
       />
@@ -85,7 +85,7 @@ const Movies = () => {
         genre={genre}
         visible={modalVisible}
         onClose={handleModalVisible}
-        onSelect={handleGenre}
+        onSelect={handleGenreFilter}
       />
       <FloatingButton iconName="plus" onPress={handleModalVisible} />
     </View>
